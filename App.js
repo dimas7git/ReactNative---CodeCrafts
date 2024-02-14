@@ -3,13 +3,17 @@ import { SafeAreaView, StyleSheet, View } from 'react-native'
 
 import Primeiro from './src/components/Primeiro'
 import CompPadrao, { Comp1, Comp2 } from './src/components/Multi'
+import MinMax from './src/components/MinMax'
 
 export default () => (
   <View style={style.App}>
-    <CompPadrao />
+    <MinMax min={3} max={20}/>
+    <MinMax min={5} max={90}/>
+
+    {/* <CompPadrao />
     <Comp1 />
     <Comp2 />
-    <Primeiro />
+    <Primeiro /> */}
   </View>
 )
 
@@ -18,6 +22,7 @@ const style = StyleSheet.create({
     flexGrow: 1,
     justifyContent: "center",
     alignItems: "center",
+    padding: 20
   }
 })
 
