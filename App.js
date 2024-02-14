@@ -1,8 +1,23 @@
 import React from 'react'
-import { Text } from 'react-native'
+import { SafeAreaView, StyleSheet, View } from 'react-native'
 
-function App(){
-  return <Text>Primeiro Componente</Text>
-}
+import Primeiro from './src/components/Primeiro'
+import CompPadrao, { Comp1, Comp2 } from './src/components/Multi'
 
-export default App
+export default () => (
+  <View style={style.App}>
+    <CompPadrao />
+    <Comp1 />
+    <Comp2 />
+    <Primeiro />
+  </View>
+)
+
+const style = StyleSheet.create({
+  App:{
+    flexGrow: 1,
+    justifyContent: "center",
+    alignItems: "center",
+  }
+})
+
