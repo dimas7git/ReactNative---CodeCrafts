@@ -7,6 +7,6 @@ export default (props) => {
     const aleatorio = parseInt(Math.random() * delta) + props.min
 
     return(
-        <Text style={estilo.fontG}>O valor aleatório é {propsrandom}</Text>
+        <Text style={estilo.fontG}>O valor aleatório é {aleatorio}</Text>
     )
 }
