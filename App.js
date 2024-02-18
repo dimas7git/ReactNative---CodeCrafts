@@ -6,11 +6,15 @@ import CompPadrao, { Comp1, Comp2 } from './src/components/Multi'
 import MinMax from './src/components/MinMax'
 import Aleatorio from './src/components/Aleatorio'
 import Titulo from './src/components/Titulo'
+import Botao from './src/components/Botao'
 
 export default () => (
   <View style={style.App}>
+    
+    <Botao />
+    {/*
     <Titulo principal="Cadastro" secundario="Tela de Cadastro" />
-    {/*<Aleatorio min={1} max={60}/>
+    <Aleatorio min={1} max={60}/>
      <MinMax min={3} max={20}/>
     <MinMax min={5} max={90}/>
     <CompPadrao />
