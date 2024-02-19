@@ -8,11 +8,13 @@ import Aleatorio from './src/components/Aleatorio'
 import Titulo from './src/components/Titulo'
 import Botao from './src/components/Botao'
 import Contador from './src/components/Contador'
+import PaiDireta from './src/components/direta/Pai'
 
 export default () => (
   <View style={style.App}>
-    <Contador inicial={100} passo={13}/>
+    <PaiDireta />
     {/*
+    <Contador inicial={100} passo={13}/>
     <Botao />
     <Titulo principal="Cadastro" secundario="Tela de Cadastro" />
     <Aleatorio min={1} max={60}/>
