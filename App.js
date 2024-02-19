@@ -7,12 +7,13 @@ import MinMax from './src/components/MinMax'
 import Aleatorio from './src/components/Aleatorio'
 import Titulo from './src/components/Titulo'
 import Botao from './src/components/Botao'
+import Contador from './src/components/Contador'
 
 export default () => (
   <View style={style.App}>
-    
-    <Botao />
+    <Contador inicial={100} passo={13}/>
     {/*
+    <Botao />
     <Titulo principal="Cadastro" secundario="Tela de Cadastro" />
     <Aleatorio min={1} max={60}/>
      <MinMax min={3} max={20}/>
