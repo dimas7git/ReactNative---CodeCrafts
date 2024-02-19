@@ -9,11 +9,14 @@ import Titulo from './src/components/Titulo'
 import Botao from './src/components/Botao'
 import Contador from './src/components/Contador'
 import PaiDireta from './src/components/direta/Pai'
+import PaiIndireta from './src/components/indireta/Pai'
+import ContadorV2 from './src/components/contador/ContadorV2'
 
 export default () => (
   <View style={style.App}>
-    <PaiDireta />
+    <ContadorV2 />
     {/*
+    <PaiDireta />
     <PaiDireta />
     <Contador inicial={100} passo={13}/>
     <Botao />
