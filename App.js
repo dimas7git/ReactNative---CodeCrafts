@@ -14,6 +14,7 @@ export default () => (
   <View style={style.App}>
     <PaiDireta />
     {/*
+    <PaiDireta />
     <Contador inicial={100} passo={13}/>
     <Botao />
     <Titulo principal="Cadastro" secundario="Tela de Cadastro" />
