@@ -1,21 +1,23 @@
 import React from 'react'
-import { SafeAreaView, StyleSheet, View } from 'react-native'
+import { SafeAreaView, StyleSheet } from 'react-native'
 
-import Primeiro from './src/components/Primeiro'
-import CompPadrao, { Comp1, Comp2 } from './src/components/Multi'
-import MinMax from './src/components/MinMax'
-import Aleatorio from './src/components/Aleatorio'
+// import Primeiro from './src/components/Primeiro'
+// import CompPadrao, { Comp1, Comp2 } from './src/components/Multi'
+// import MinMax from './src/components/MinMax'
+// import Aleatorio from './src/components/Aleatorio'
 import Titulo from './src/components/Titulo'
-import Botao from './src/components/Botao'
-import Contador from './src/components/Contador'
-import PaiDireta from './src/components/direta/Pai'
-import PaiIndireta from './src/components/indireta/Pai'
-import ContadorV2 from './src/components/contador/ContadorV2'
-
+// import Botao from './src/components/Botao'
+// import Contador from './src/components/Contador'
+// import PaiDireta from './src/components/direta/Pai'
+// import PaiIndireta from './src/components/indireta/Pai'
+//import ContadorV2 from './src/components/contador/ContadorV2'
+import Diferenciar from './src/components/Diferenciar'
 export default () => (
-  <View style={style.App}>
-    <ContadorV2 />
+  <SafeAreaView style={style.App}>
+    <Diferenciar />
+
     {/*
+    <ContadorV2 />
     <PaiDireta />
     <PaiDireta />
     <Contador inicial={100} passo={13}/>
@@ -28,7 +30,7 @@ export default () => (
     <Comp1 />
     <Comp2 />
     <Primeiro /> */}
-  </View>
+  </SafeAreaView>
 )
 
 const style = StyleSheet.create({
