@@ -5,18 +5,20 @@ import { SafeAreaView, StyleSheet } from 'react-native'
 // import CompPadrao, { Comp1, Comp2 } from './src/components/Multi'
 // import MinMax from './src/components/MinMax'
 // import Aleatorio from './src/components/Aleatorio'
-import Titulo from './src/components/Titulo'
+// import Titulo from './src/components/Titulo'
 // import Botao from './src/components/Botao'
 // import Contador from './src/components/Contador'
 // import PaiDireta from './src/components/direta/Pai'
 // import PaiIndireta from './src/components/indireta/Pai'
 //import ContadorV2 from './src/components/contador/ContadorV2'
-import Diferenciar from './src/components/Diferenciar'
+// import Diferenciar from './src/components/Diferenciar'
+import ParImpar from './src/components/ParImpar'
+
 export default () => (
   <SafeAreaView style={style.App}>
-    <Diferenciar />
-
+    <ParImpar num={3} />
     {/*
+    <Diferenciar />
     <ContadorV2 />
     <PaiDireta />
     <PaiDireta />
