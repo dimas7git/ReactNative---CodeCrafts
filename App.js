@@ -17,14 +17,16 @@ import { SafeAreaView, StyleSheet } from 'react-native'
 // import Familia from './src/relacao/Familia'
 // import Membro from './src/relacao/Membro'
 //import UsuarioLogado from './src/components/UsuarioLogado'
-import ListaProdutos from './src/components/produtos/ListaProdutos'
-import ListaProdutosV2 from './src/components/produtos/ListaProdutosV2'
+// import ListaProdutos from './src/components/produtos/ListaProdutos'
+// import ListaProdutosV2 from './src/components/produtos/ListaProdutosV2'
+import DigiteSeuNome from './src/components/DigiteSeuNome'
 
 export default () => (
   <SafeAreaView style={style.App}>
+    <DigiteSeuNome />
+    {/*
     <ListaProdutosV2 />
     <ListaProdutos />
-    {/*
       <UsuarioLogado usuario={{ nome: 'Gui', email: 'usuario@email.com' }} />
         <Familia>
       <Membro nome="Bia" sobrenome="Arruda" />
