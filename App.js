@@ -1,5 +1,6 @@
 import React from 'react'
 import { SafeAreaView, StyleSheet } from 'react-native'
+import Quadrado from './src/components/layout/Quadrado'
 
 
 // import Primeiro from './src/components/Primeiro'
@@ -19,12 +20,16 @@ import { SafeAreaView, StyleSheet } from 'react-native'
 //import UsuarioLogado from './src/components/UsuarioLogado'
 // import ListaProdutos from './src/components/produtos/ListaProdutos'
 // import ListaProdutosV2 from './src/components/produtos/ListaProdutosV2'
-import DigiteSeuNome from './src/components/DigiteSeuNome'
+// import DigiteSeuNome from './src/components/DigiteSeuNome'
 
 export default () => (
   <SafeAreaView style={style.App}>
-    <DigiteSeuNome />
+    <Quadrado />
+    <Quadrado cor='#f00' />
+    <Quadrado cor='#0f0' />
+    <Quadrado cor='#00f' />
     {/*
+    <DigiteSeuNome />
     <ListaProdutosV2 />
     <ListaProdutos />
       <UsuarioLogado usuario={{ nome: 'Gui', email: 'usuario@email.com' }} />
