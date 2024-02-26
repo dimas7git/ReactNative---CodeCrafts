@@ -1,9 +1,8 @@
 import React from 'react';
 import { Text, View } from 'react-native';
-import Estilo from '../estilo';
 
 export default props => {
-    const tamanho = 50;
+    const tamanho = props.lado || 5;
     return (
         <View style={{
             height: tamanho,
