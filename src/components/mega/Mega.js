@@ -6,7 +6,10 @@ export default class Mega extends React.Component{
 
     render(){
         return(
-            <Text style={Estilo.fontG}>Mega Sena</Text>
+            <Text style={Estilo.fontG}>
+            Mega Sena
+            {this.props.qtdeNumeros}
+            </Text>
         )
     }
 }
