@@ -6,10 +6,24 @@ export default class Mega extends React.Component {
 
     state = {
         qtdeNumeros: this.props.qtdeNumeros,
+        numeros: []
     }
 
     alterarQtdeNumero = (qtde) => {
         this.setState({ qtdeNumeros: qtde })
+    }
+
+    gerarNumeroNaoContido = nums => {
+        const novo = parseInt(Math.random() * 60) + 1
+        return nums.includes(novo) ? this.gerarNumeroNaoContido(nums) : novo
+    }
+
+    gerarNumeros = () => {
+        const numeros = Array(this.state.qtdeNumeros)
+            .fill()
+            .reduce(n => [...n, this.gerarNumeroNaoContido(n)], [])
+            .sort((a, b) => a - b)
+        this.setState({ numeros })
     }
 
     render() {
@@ -17,7 +31,6 @@ export default class Mega extends React.Component {
             <>
                 <Text style={Estilo.fontG}>
                     Mega Sena
-                    {this.props.qtdeNumeros}
                 </Text>
                 <TextInput 
                     keyboardType={'numeric'}
@@ -26,6 +39,13 @@ export default class Mega extends React.Component {
                     value={`${this.state.qtdeNumeros}`}
                     onChageText={this.alterarQtdeNumero}
                 />
+                <Button 
+                    title='Gerar'
+                    onPress={this.gerarNumeros}
+                />
+                <Text>
+                    {this.state.numeros.join(',')}
+                </Text>
             </>
         )
     }
