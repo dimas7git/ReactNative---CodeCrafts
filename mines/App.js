@@ -2,8 +2,9 @@ import { StyleSheet, Text, View, Alert } from 'react-native';
 import params from './src/params';
 import { Component } from 'react';
 import MineField from './src/components/MineField';
-import { createdMineBoard, cloneBoard, openField, hadExplosion, wonGame, showMines, invertFlag, flagsUsed } from './src/functions';
+import { createMinedBoard, cloneBoard, openField, hadExplosion, wonGame, showMines, invertFlag, flagsUsed } from './src/functions';
 import Header from './src/components/Header';
+import LevelSelection from './src/screens/LevelSelection';
 
 
 export default class App extends Component {
@@ -23,10 +24,10 @@ export default class App extends Component {
     const cols = params.getColumnsAmount();
     const rows = params.getRowsAmount();
     return {
-      board: createdMineBoard(rows, cols, this.minesAmount()),
+      board: createMinedBoard(rows, cols, this.minesAmount()),
       won: false,
       lost: false,
-
+      showLevelSelection: false
     };
   }
 
@@ -60,11 +61,22 @@ export default class App extends Component {
     this.setState({ board, won });
   }
 
+  onLevelSelected = level => {
+    params.difficultLevel = level;
+    this.setState(this.createState());
+  }
+
   render() {
     return (
       <View style={styles.container}>
+        <LevelSelection isVisible={this.state.showLevelSelection}
+          onLevelSelected={this.onLevelSelected}
+          onCancel={() => this.setState({ showLevelSelection: false })}           
+          />
         <Header flagsLeft={this.minesAmount() - flagsUsed(this.state.board)}
-          onNewGame={() => this.setState(this.createState())} />
+          onNewGame={() => this.setState(this.createState())} 
+          onFlagPress={() => this.setState({ showLevelSelection: true })}
+          />
         <View style={styles.board}>
           <MineField board={this.state.board}
             onOpenField={this.onOpenField}
@@ -78,7 +90,7 @@ export default class App extends Component {
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    marginTop: 40,
     justifyContent: 'flex-end',
   },
   board: {
