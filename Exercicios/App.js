@@ -1,6 +1,6 @@
 import React from 'react'
-import { SafeAreaView, StyleSheet } from 'react-native'
-
+import { SafeAreaView, StyleSheet, Text } from 'react-native'
+import TextoCentral from './src/navigation/components/TextoCentral'
 
 
 // import Primeiro from './src/components/Primeiro'
@@ -26,12 +26,19 @@ import { SafeAreaView, StyleSheet } from 'react-native'
 //import FlexboxV2 from './src/components/layout/FlexboxV2'
 //import FlexboxV3 from './src/components/layout/FlexboxV3'
 // import FlexboxV4 from './src/components/layout/FlexboxV4'
-import Mega from './src/components/mega/Mega'
+// import Mega from './src/components/mega/Mega'
 
 
 export default () => (
-  <SafeAreaView style={style.App}>
-    
+  <SafeAreaView style={{flex: 1}}>
+    <TextoCentral>App</TextoCentral>
+  </SafeAreaView>
+)
+
+
+
+
+   
     {/*
     <Mega qtdeNumeros={7}/>
     <FlexboxV4/>
@@ -65,9 +72,6 @@ export default () => (
     <Comp1 />
     <Comp2 />
     <Primeiro /> */}
-  </SafeAreaView>
-)
-
 const style = StyleSheet.create({
   App: {
     flexGrow: 1,
