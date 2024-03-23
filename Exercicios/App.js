@@ -1,6 +1,8 @@
 import React from 'react'
 import { SafeAreaView, StyleSheet, Text } from 'react-native'
-import TextoCentral from './src/navigation/components/TextoCentral'
+import TelaA from './src/navigation/views/TelaA'
+import TelaB from './src/navigation/views/TelaB'
+import TelaC from './src/navigation/views/TelaC'
 
 
 // import Primeiro from './src/components/Primeiro'
@@ -30,16 +32,18 @@ import TextoCentral from './src/navigation/components/TextoCentral'
 
 
 export default () => (
-  <SafeAreaView style={{flex: 1}}>
-    <TextoCentral>App</TextoCentral>
+  <SafeAreaView style={{ flex: 1 }}>
+    <TelaA />
+    <TelaB />
+    <TelaC />
   </SafeAreaView>
 )
 
 
 
 
-   
-    {/*
+
+{/*
     <Mega qtdeNumeros={7}/>
     <FlexboxV4/>
     <FlexboxV3 />
